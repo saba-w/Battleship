@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- <?php require ("lang.php"); ?> -->
+<html lang="fr">
+
+<head>
+    <title>
+        Bataille Navale
+    </title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <!-- HEAD -->
+    <header id="navbar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand">
+                    <img src="./images/logo.png" alt="logo" style="width:100px;" class="rounded" />
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#toggleMobileMenu" aria-controls="toggleMobileMenu" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-between" id="toggleMobileMenu">
+                    <ul class="navbar-nav ml-auto text-center">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link active dropdown-toggle" data-bs-toggle="dropdown" role="button" aria-haspopup="false" aria-expanded="false">
+                                <ion-icon name="language-outline" size="large"></ion-icon>
+                            </a>
+                            <ul class="dropdown-menu bg-dark">
+                                <li><button class="dropdown-item text-white" id="fr" data-reload>Français</button></li>
+                                <li><button class="dropdown-item text-white" id="en" data-reload>Anglais</button></li>
+
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--script>
+        const navLinks = document.querySelectorAll('.nav-item')
+        const menuToggle = document.getElementById('toggleMobileMenu')
+        const bsCollapse = new bootstrap.Collapse(menuToggle, {
+            toggle: false
+        })
+        navLinks.forEach((l) => {
+            l.addEventListener('click', () => {
+                bsCollapse.toggle()
+            })
+        })
+    </script-->
+
+    <!--BODY-->
+
+    <div class="play" id="accueil" justify-content-between>
+        <div id="Title" class="game-title">Bataille Navale</div>
+        <div class="play__container d-grid gap-2">
+            <a href="index.html">
+                <button id="Jouer" class="play__heading btn btn-lg btn-primary" style="margin-bottom: 224px; font-size: 30px;" type="button">Jouer maintenant</button>
+            </a>
+        </div>
+    </div>
+    <div style="color: #777;background-color:white;text-align:center;padding:50px 80px;text-align: justify;">
+        <h3 id="Presentation" style="text-align:center;">Vidéo Présentation & Consignes</h3>
+    </div>
+    <div class="container__section2">
+        <div class="container__presentation mt-3" id="about">
+            <div class="row display-flex justify-content-between">
+                <div class="col-lg-6 p-3">
+                    <iframe width="100%" height="100%" margin-top="21.875%" frameborder="0" src="https://www.youtube.com/embed/Aiww0hDnYx0" allow="autoplay; encrypted-media" allowfullscreen>
+                    </iframe>
+                </div>
+                <div class="container__text col-lg-6 text-black p-3">
+                    <h3 id="Consignes">Description & Consignes</h3>
+                    <p id="Textes">Au début d’une partie, chaque joueur place sa flotte sur la première grille. Chaque navire doit être placé, de manière horizontale ou verticale et ils ne peuvent pas être superposés. La partie commence par un lancer de pièce (pile
+                        ou face) pour déterminer le joueur qui débute. A chaque tour, un joueur doit choisir une case de la seconde grille sur laquelle il souhaite tirer (par exemple A1). Chaque impact sera représenté sur la grille numéro 2 (avec 2 notations
+                        pour différencier les tirs touchés et loupés). Il est impossible de sélectionner deux fois la même case pour tirer. La résolution d’un tir se conclut par trois états possibles : touché, loupé ou coulé. Lorsque toutes les cases
+                        d’un navire sont touchées, ce dernier est coulé.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fas fa-arrow-up"></i></button>
+
+
+    <footer class="footer-dark">
+        <p><a id="Foot" href="#">Mention Légales</a></p>
+    </footer>
+
+    <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 350 || document.documentElement.scrollTop > 350) {
+                mybutton.style.display = "block";
+            } else {
+                mybutton.style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+    <script src="index.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+<!-- <?php include 'footer.php' ?> -->
